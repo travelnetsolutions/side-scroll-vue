@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<title>side-scroll demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./side-scroll.umd.js"></script>
+<link rel="stylesheet" href="./side-scroll.css">
+
+<div id="app">
+  <demo></demo>
+</div>
+
+<script>
+new Vue({
+  components: {
+    demo: side-scroll
+  }
+}).$mount('#app')
+</script>
