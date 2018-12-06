@@ -7,7 +7,8 @@
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name side-scroll"
+    "build-bundle": "vue-cli-service build --target lib --name side-scroll",
+    "publish:public": "npm publish --access public"
   },
   "main": "./dist/side-scroll.common.js",
   "module": "dist/my-component.esm.js",
