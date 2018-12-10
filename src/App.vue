@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import SideScroll from './components/side-scroll.vue';
+import SideScroll from './components/sideScroll.vue';
 export default Vue.extend({
   components: {
     SideScroll,
