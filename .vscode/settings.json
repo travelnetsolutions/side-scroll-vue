@@ -1,0 +1,17 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/coverge": true
+  },
+  "typescript.referencesCodeLens.enabled": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.wordWrap": "on",
+
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "tslint.exclude": "**/node_modules/**/*",
+  "cSpell.words": ["csrf", "definitelytyped", "promisified"]
+}

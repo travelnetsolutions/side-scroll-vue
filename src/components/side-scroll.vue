@@ -12,28 +12,30 @@
 </div>
 </template>
 
-<script>
+<script lang="ts">
 import { throttle } from 'lodash';
-export default {
+import Vue from 'vue';
+
+export default Vue.extend({
   data() {
     return {
       showLeft: false,
-      showRight: true
-    }
+      showRight: true,
+    };
   },
   methods: {
-    scrollContent(distance) {
-      const scrollContent = this.$refs.scrollContent;
+    scrollContent(distance: number) {
+      const scrollContent: Element = this.$refs.scrollContent as Element;
       if (scrollContent.scrollLeft > -15) {
         const scroll = scrollContent.clientWidth / distance;
         scrollContent.scroll({
           top: 0,
           left: scrollContent.scrollLeft + scroll,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       }
     },
-    scrollContentListener: throttle(function () {
+    scrollContentListener: throttle(function(this: any) {
       const scrollContent = this.$refs.scrollContent;
       if (scrollContent.scrollLeft <= 0) {
         this.showLeft = false;
@@ -43,9 +45,9 @@ export default {
         this.showLeft = true;
         this.showRight = true;
       }
-    }, 250)
-  }
-}
+    }, 250),
+  },
+});
 </script>
 
 <style lang="scss">
