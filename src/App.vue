@@ -1,33 +1,29 @@
 <template>
-<div class="container">
-  <side-scroll>
-    <div :key="index" v-for="(slide, index) in slides">
-      <div class="slide">{{slide}}</div>
-    </div>
-  </side-scroll>
-</div>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  </div>
 </template>
 
-<script>
-import SideScroll from './components/side-scroll';
-export default {
+<script lang="ts">
+import Vue from 'vue';
+import HelloWorld from './components/HelloWorld.vue';
+
+export default Vue.extend({
+  name: 'app',
   components: {
-    SideScroll
-  },
-  data: () => ({
-    slides: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-  })
-}
+    HelloWorld
+  }
+});
 </script>
 
 <style lang="scss">
-.slide {
-  height: 100px;
-  width: 50px;
-  background-color: blue;
-  margin-right: 30px;
-}
-.container {
-  width: 50%;
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
