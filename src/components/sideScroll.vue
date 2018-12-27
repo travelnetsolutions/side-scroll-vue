@@ -73,10 +73,6 @@ export default {
   -webkit-overflow-scrolling: touch;
   position: relative;
 
-  @media (min-width: 768px) {
-    width: calc(100% + 60px);
-  }
-
   ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;

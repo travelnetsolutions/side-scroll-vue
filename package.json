@@ -40,7 +40,7 @@
     "vue-template-compiler": "^2.5.17"
   },
   "browser": {
-    "./sfc": "src/my-component.vue"
+    "./sfc": "src/side-scroll.vue"
   },
   "files": [
     "dist/*",
@@ -51,8 +51,5 @@
   ],
   "main": "./dist/side-scroll.common.js",
   "module": "dist/side-scroll.esm.js",
-  "unpkg": "dist/side-scroll.min.js",
-  "browser": {
-    "./sfc": "src/side-scroll.vue"
-  }
+  "unpkg": "dist/side-scroll.min.js"
 }
