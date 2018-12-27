@@ -34,7 +34,7 @@ export default {
         });
       }
     },
-    scrollContentListener: throttle(function(this) {
+    scrollContentListener: throttle(function() {
       const scrollContent = this.$refs.scrollContent;
       if (scrollContent.scrollLeft <= 0) {
         this.showLeft = false;

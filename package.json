@@ -1,6 +1,6 @@
 {
   "name": "@travelnetsolutions/side-scroll-vue",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "author": "travelnetsolutions",
   "scripts": {
@@ -8,12 +8,13 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build-bundle": "vue-cli-service build --target lib --name side-scroll src/components/index.ts",
-    "build-rollup": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "release": "npm run build-bundle && npm publish --access public",
+    "build-rollup": "npm run build:umd & npm run build:es & npm run build:unpkg & npm run build:cjs",
+    "release": "npm run build-rollup && npm publish --access public",
     "test:unit": "vue-cli-service test:unit",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/side-scroll-vue.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/side-scroll-vue.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/side-scroll-vue.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/side-scroll.umd.js",
+    "build:cjs": "rollup --config build/rollup.config.js --format cjs --file dist/side-scroll.common.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/side-scroll.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/side-scroll.min.js"
   },
   "dependencies": {
     "@types/lodash": "^4.14.118",
@@ -49,6 +50,9 @@
     "*.js"
   ],
   "main": "./dist/side-scroll.common.js",
-  "module": "dist/my-component.esm.js",
-  "unpkg": "dist/my-component.min.js"
+  "module": "dist/side-scroll.esm.js",
+  "unpkg": "dist/side-scroll.min.js",
+  "browser": {
+    "./sfc": "src/side-scroll.vue"
+  }
 }
