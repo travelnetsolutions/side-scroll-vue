@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import SideScroll from './sideScroll.vue';
 
-const Components: any = {
+export const Components: any = {
   SideScroll,
 };
 
